@@ -6,4 +6,4 @@ To set up these environmental variables, follow these instructions:
 2) Next, configure your credentials: 'aws configure'
 3) Then enter your credentials.
 
-Please click the generated link after running the code to download the newly converted .json file.
+Please read the comments in the Python script for more information on what each section of the code does. Click the generated link after running the code to download the newly converted .json file.
