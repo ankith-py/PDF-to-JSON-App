@@ -17,7 +17,7 @@ def download_pdf_from_url(url):
     return file_stream
 
 
-# Generate a pre-signed S3 URL from appropriate bucket and file. Replace with your bucket name and file key
+# Generate a pre-signed S3 URL from appropriate bucket and file. REPLACE with your bucket name and file key
 s3_bucket_name = 'your-bucket-name'
 s3_file_key = 'your-file-key'
 
