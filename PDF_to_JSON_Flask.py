@@ -8,8 +8,6 @@ from flask import Flask, Response
 app = Flask(__name__)
 s3 = boto3.client('s3')
 
-# Get pdf from non-public AWS S3 URL. Assumes that IAM user has permission to read s3 bucket files and that
-# AWS credential environmental variables are set up. Refer to the README file for more information.
 
 # Generate a pre-signed S3 URL from appropriate bucket and file. Replace with your bucket name and file key
 s3_bucket_name = 'inpharmd-samples'
@@ -18,6 +16,8 @@ s3_file_key = '10.1007@s11239-019-01846-5.pdf'
 url = s3.generate_presigned_url('get_object', Params={'Bucket': s3_bucket_name, 'Key': s3_file_key}, ExpiresIn=600)
 
 
+# Get pdf from non-public AWS S3 URL. Assumes that IAM user has permission to read s3 bucket files and that
+# AWS credential environmental variables are set up. Refer to the README file for more information.
 def get_stream_from_url(url):
     response = requests.get(url)
     file_stream = BytesIO(response.content)
