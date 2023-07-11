@@ -9,9 +9,9 @@ app = Flask(__name__)
 s3 = boto3.client('s3')
 
 
-# Generate a pre-signed S3 URL from appropriate bucket and file. Replace with your bucket name and file key
-s3_bucket_name = 'inpharmd-samples'
-s3_file_key = '10.1007@s11239-019-01846-5.pdf'
+# Generate a pre-signed S3 URL from appropriate bucket and file. REPLACE with your bucket name and file key
+s3_bucket_name = 'your-bucket-name'
+s3_file_key = 'your-file-key'
 # Pre-signed S3 URL acts as payload
 url = s3.generate_presigned_url('get_object', Params={'Bucket': s3_bucket_name, 'Key': s3_file_key}, ExpiresIn=600)
 
