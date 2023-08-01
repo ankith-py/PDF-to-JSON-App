@@ -1,4 +1,4 @@
-# PDF-to-JSON-from-S3
+# PDF -> JSON using AWS S3
 This is a simple application using Python (via PyCharm) and Flask that takes an AWS S3 PDF url as payload, parses the pdf, and returns a .json file download with appropriate sections. Before running the code, the user must be an IAM user with read access to S3 bucket files and set up environmental AWS credential variables in order to successfully run the application.
 
 To set up these environmental variables, follow these instructions:
